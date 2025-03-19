@@ -4,8 +4,8 @@
   "description": "A razorpay demo application to checkout payments and refunds from and to client",
   "main": "src/index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server",
-    "build": "./node_modules/.bin/webpack",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && node_modules\\.bin\\webpack-dev-server",
+    "build": "cross-env-shell NODE_ENV=production \"./node_modules/.bin/webpack\"",
     "test": "node test"
   },
   "repository": {
